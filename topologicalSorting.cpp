@@ -25,6 +25,7 @@ Graph::Graph(int V) {
 }
 
 void Graph::addEdge(int u, int v) {
+	cout << "An edge has been added " << u << " -> " << v << "\n";
     adj[u].push_back(v);//since it is a directed graph, we only need to update one adjacency list
 }
 
@@ -62,7 +63,8 @@ void Graph::topologicalSort() {
     
     //print out the result
     while(!stack.empty()) {
-        cout << stack.top() << " ";
+    	cout << "Adding a node to the stack: " << Stack.top() << "\n";
+        //cout << stack.top() << " ";
         stack.pop();
     }
 }
